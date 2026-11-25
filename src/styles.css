@@ -170,3 +170,6 @@ input.tiny { width: 4.2rem; min-height: 32px; padding: .2rem .4rem; margin: 0 .2
 .sheet .row { display: flex; justify-content: flex-end; align-items: center; gap: .8rem; }
 @media (min-width: 640px) { .overlay { place-items: center; } }
 .top-links { display: flex; gap: .6rem; align-items: center; }
+.agree { margin-top: 1rem; max-width: 22rem; }
+.agree a, .policy-links a { color: inherit; text-underline-offset: 3px; }
+.policy-links { display: flex; gap: 1rem; justify-content: center; margin: 2rem 0 1rem; }

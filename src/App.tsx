@@ -40,6 +40,7 @@ function SignIn() {
       <h1>Junior</h1>
       <p>A sourdough starter's diary.</p>
       <button className="primary big" onClick={go}>Sign in with Google</button>
+      <p className="small muted agree">By continuing you agree to the <a href="https://jessicafoxdesign.com/terms/" target="_blank" rel="noopener">Terms</a>, <a href="https://jessicafoxdesign.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://jessicafoxdesign.com/acceptable-use/" target="_blank" rel="noopener">Acceptable Use Policy</a>. For adults 18 and over.</p>
       {error && <p className="error">{error}</p>}
     </main>
   );
@@ -120,6 +121,11 @@ function Signed({ userId }: { userId: string }) {
         {tab === "history" && <History cycles={cycles} onChanged={() => reload()}
           onEditFeeding={(f) => { setEditing(f); setTab("feed"); }} />}
       </main>
+      <p className="policy-links small muted">
+        <a href="https://jessicafoxdesign.com/terms/" target="_blank" rel="noopener">Terms</a>
+        <a href="https://jessicafoxdesign.com/privacy/" target="_blank" rel="noopener">Privacy</a>
+        <a href="https://jessicafoxdesign.com/acceptable-use/" target="_blank" rel="noopener">Acceptable use</a>
+      </p>
       <nav className="tabs">
         {(["today", "snap", "feed", "bake", "history"] as Tab[]).map((t) => (
           <button key={t} className={tab === t ? "on" : ""} onClick={() => { setEditing(null); setTab(t); }}>
