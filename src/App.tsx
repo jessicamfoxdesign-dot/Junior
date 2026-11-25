@@ -8,6 +8,7 @@ import { Snap } from "./screens/Snap";
 import { Feed } from "./screens/Feed";
 import { History } from "./screens/History";
 import { Bake } from "./screens/Bake";
+import { ReportProblem } from "./components/ReportProblem";
 
 type Tab = "today" | "snap" | "feed" | "bake" | "history";
 
@@ -104,7 +105,10 @@ function Signed({ userId }: { userId: string }) {
     <div className="app">
       <header className="top">
         <h1>{starter.name}</h1>
-        <button className="link small" onClick={() => supabase.auth.signOut()}>Sign out</button>
+        <span className="top-links">
+          <ReportProblem />
+          <button className="link small" onClick={() => supabase.auth.signOut()}>Sign out</button>
+        </span>
       </header>
       {error && <p className="error banner">{error} <button className="link" onClick={() => reload()}>Retry</button></p>}
       <main>

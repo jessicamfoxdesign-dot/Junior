@@ -159,3 +159,14 @@ input.tiny { width: 4.2rem; min-height: 32px; padding: .2rem .4rem; margin: 0 .2
 .bakes { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
 .bake { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
 .tabs button { max-width: 120px; }
+
+/* Report a problem */
+.overlay { position: fixed; inset: 0; z-index: 50; background: rgb(40 30 20 / .35); display: grid; place-items: end center; padding: 1rem; }
+.sheet { width: 100%; max-width: 460px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem 1.1rem; display: grid; gap: .7rem; margin-bottom: env(safe-area-inset-bottom); }
+.sheet h2 { margin: 0; }
+.sheet p { margin: 0; }
+.sheet textarea { font: inherit; color: var(--ink); background: #fff; border: 1.5px solid var(--line); border-radius: 10px; padding: .6rem .7rem; width: 100%; box-sizing: border-box; resize: vertical; }
+.sheet textarea:focus { outline: 2px solid var(--crust); outline-offset: 1px; border-color: transparent; }
+.sheet .row { display: flex; justify-content: flex-end; align-items: center; gap: .8rem; }
+@media (min-width: 640px) { .overlay { place-items: center; } }
+.top-links { display: flex; gap: .6rem; align-items: center; }
